@@ -50,9 +50,9 @@
 
 #endif 
 
-#define DELAY_TIME 	5
+#define DELAY_TIME 	1
 
-#define IIC_TIME_QU 1
+#define IIC_TIME_QU 0
 /*********************
  *	MACRO
  *********************/

@@ -380,7 +380,6 @@ void tp_lowlevel_init(void)
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;			//不需要上拉电阻
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-
 	//只要是输出模式，有初始电平状态
 	TP_SCL_W=1;
 	TP_SDA_W=1;	

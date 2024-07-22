@@ -30,6 +30,7 @@
 "..\obj\img_lvgl_logo.o"
 "..\obj\lv_port_disp.o"
 "..\obj\lv_port_indev.o"
+"..\obj\lv_port_fs.o"
 "..\obj\lv_arc.o"
 "..\obj\lv_bar.o"
 "..\obj\lv_btn.o"

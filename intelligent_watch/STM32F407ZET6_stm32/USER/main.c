@@ -53,9 +53,9 @@ int main(void)
 	lv_port_indev_init();
 
 	// 初始化lvgl demo
-//	lv_demo_widgets();
+	lv_demo_widgets();
 	
-	ui_init();
+//	ui_init();
 	
 	// tim3初始化，定时周期为1ms
 	tim3_init();

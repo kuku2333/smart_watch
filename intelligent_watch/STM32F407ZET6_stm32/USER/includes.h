@@ -32,4 +32,6 @@ extern RTC_TimeTypeDef  	RTC_TimeStructure;
 extern RTC_InitTypeDef  	RTC_InitStructure;
 extern RTC_DateTypeDef 		RTC_DateStructure;
 
+extern lv_disp_drv_t *g_disp_drvp; 
+
 #endif
