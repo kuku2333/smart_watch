@@ -51,7 +51,7 @@ void Uasrt1_Init(void)
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
-	USART_InitStructure.USART_BaudRate = 9600;
+	USART_InitStructure.USART_BaudRate = 115200;
     USART_InitStructure.USART_WordLength = USART_WordLength_8b;
     USART_InitStructure.USART_StopBits = USART_StopBits_1;
     USART_InitStructure.USART_Parity = USART_Parity_No;
@@ -80,7 +80,7 @@ void USART1_IRQHandler(void)
 	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
 	{
 		d=USART_ReceiveData(USART1);
-		
+		USART_SendData(USART1, d);
 		
 		g_usart1_rx_buf[g_usart1_rx_cnt++]=d;
 	

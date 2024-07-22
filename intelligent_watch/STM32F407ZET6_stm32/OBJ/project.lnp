@@ -223,6 +223,11 @@
 "..\obj\lv_obj_tree.o"
 "..\obj\lv_refr.o"
 "..\obj\lv_theme.o"
+"..\obj\heap_4.o"
+"..\obj\port.o"
+"..\obj\list.o"
+"..\obj\queue.o"
+"..\obj\tasks.o"
 --strict --scatter "..\OBJ\project.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

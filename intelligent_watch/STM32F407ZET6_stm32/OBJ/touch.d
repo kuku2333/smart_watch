@@ -184,3 +184,14 @@
 ..\obj\touch.o: ..\LVGL\ui\ui_helpers.h
 ..\obj\touch.o: ..\LVGL\ui\ui.h
 ..\obj\touch.o: ..\LVGL\ui\ui_events.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\FreeRTOS.h
+..\obj\touch.o: ..\USER\FreeRTOSConfig.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\projdefs.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\portable.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\deprecated_definitions.h
+..\obj\touch.o: ..\FreeRTOS_PORTABLE\portmacro.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\mpu_wrappers.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\task.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\list.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\semphr.h
+..\obj\touch.o: ..\FreeRTOS_INCLUDE\queue.h

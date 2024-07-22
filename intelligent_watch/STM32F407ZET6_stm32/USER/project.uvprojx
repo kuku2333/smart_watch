@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx,LV_LVGL_H_INCLUDE_SIMPLE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\DEVICE_LIB\inc;..\CMSIS;..\SYSTEM;..\USER;..\SYSTEM\Delay;..\SYSTEM\sys;..\LVGL;..\LVGL\src;..\LVGL\examples\porting;..\LVGL\demos\widgets;..\HARDWARE\LCD;..\HARDWARE\TIM;..\HARDWARE\uasrt;..\LVGL\ui</IncludePath>
+              <IncludePath>..\DEVICE_LIB\inc;..\CMSIS;..\SYSTEM;..\USER;..\SYSTEM\Delay;..\SYSTEM\sys;..\LVGL;..\LVGL\src;..\LVGL\examples\porting;..\LVGL\demos\widgets;..\HARDWARE\LCD;..\HARDWARE\TIM;..\HARDWARE\uasrt;..\LVGL\ui;..\FreeRTOS_PORTABLE;..\FreeRTOS_INCLUDE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1624,6 +1624,46 @@
               <FileName>lv_theme.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\src\core\lv_theme.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeRTOS_PORTABLE</GroupName>
+          <Files>
+            <File>
+              <FileName>heap_4.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS_PORTABLE\heap_4.c</FilePath>
+            </File>
+            <File>
+              <FileName>port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS_PORTABLE\port.c</FilePath>
+            </File>
+            <File>
+              <FileName>portmacro.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\FreeRTOS_PORTABLE\portmacro.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeRTOS_SOURCE</GroupName>
+          <Files>
+            <File>
+              <FileName>list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS_SOURCE\list.c</FilePath>
+            </File>
+            <File>
+              <FileName>queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS_SOURCE\queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS_SOURCE\tasks.c</FilePath>
             </File>
           </Files>
         </Group>

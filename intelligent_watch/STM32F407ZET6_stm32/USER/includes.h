@@ -23,6 +23,9 @@
 #include "ui_events.h"
 //#include "RTC.h"
 //#include "BLT_cmd.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
 
 extern GPIO_InitTypeDef  	GPIO_InitStructure;
 extern NVIC_InitTypeDef 	NVIC_InitStructure;		

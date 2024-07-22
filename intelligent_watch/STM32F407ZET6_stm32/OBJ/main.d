@@ -184,3 +184,14 @@
 ..\obj\main.o: ..\LVGL\ui\ui_helpers.h
 ..\obj\main.o: ..\LVGL\ui\ui.h
 ..\obj\main.o: ..\LVGL\ui\ui_events.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\FreeRTOS.h
+..\obj\main.o: ..\USER\FreeRTOSConfig.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\projdefs.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\portable.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\deprecated_definitions.h
+..\obj\main.o: ..\FreeRTOS_PORTABLE\portmacro.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\mpu_wrappers.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\task.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\list.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\semphr.h
+..\obj\main.o: ..\FreeRTOS_INCLUDE\queue.h
