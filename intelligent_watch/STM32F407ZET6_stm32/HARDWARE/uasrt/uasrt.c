@@ -16,9 +16,9 @@ static USART_InitTypeDef   		USART_InitStructure;
 static GPIO_InitTypeDef 		GPIO_InitStructure;
 static NVIC_InitTypeDef   		NVIC_InitStructure;
 
-volatile uint8_t  g_usart1_rx_buf[1280];
-volatile uint32_t g_usart1_rx_cnt=0;
-volatile uint32_t g_usart1_rx_end=0;
+//volatile uint8_t  g_usart1_rx_buf[1280];
+//volatile uint32_t g_usart1_rx_cnt=0;
+//volatile uint32_t g_usart1_rx_end=0;
 
 /**
 	*****************************************************************************
@@ -82,19 +82,19 @@ void USART1_IRQHandler(void)
 		d=USART_ReceiveData(USART1);
 		USART_SendData(USART1, d);
 		
-		g_usart1_rx_buf[g_usart1_rx_cnt++]=d;
-	
-		if(g_usart1_rx_cnt >= sizeof g_usart1_rx_buf)
-		{
-			g_usart1_rx_end=1;
-		}			
+//		g_usart1_rx_buf[g_usart1_rx_cnt++]=d;
+//	
+//		if(g_usart1_rx_cnt >= sizeof g_usart1_rx_buf)
+//		{
+//			g_usart1_rx_end=1;
+//		}			
 	
 		//清空标志位，可以响应新的中断请求
 		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
 	}
 }
 
-void Send_String(char *string)
+void Send_String(char *string)     
 {
 	uint8_t i = 0;
 	char temp;

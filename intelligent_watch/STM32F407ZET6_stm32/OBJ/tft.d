@@ -184,6 +184,9 @@
 ..\obj\tft.o: ..\LVGL\ui\ui_helpers.h
 ..\obj\tft.o: ..\LVGL\ui\ui.h
 ..\obj\tft.o: ..\LVGL\ui\ui_events.h
+..\obj\tft.o: ..\HARDWARE\RTC\RTC.h
+..\obj\tft.o: ..\HARDWARE\BLT_cmd\BLT_cmd.h
+..\obj\tft.o: ..\HARDWARE\RTC\RTC.h
 ..\obj\tft.o: ..\FreeRTOS_INCLUDE\FreeRTOS.h
 ..\obj\tft.o: ..\USER\FreeRTOSConfig.h
 ..\obj\tft.o: ..\FreeRTOS_INCLUDE\projdefs.h

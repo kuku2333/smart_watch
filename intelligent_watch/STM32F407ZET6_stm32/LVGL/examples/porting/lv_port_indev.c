@@ -264,7 +264,7 @@ static bool touchpad_is_pressed(void)
 	
 	tp_read(&g_tp_x,&g_tp_y);
 	
-	printf("finger=%d\r\n",tp_finger_num_get());
+//	printf("finger=%d\r\n",tp_finger_num_get());
 	
 	if(tp_finger_num_get())
 		return true;

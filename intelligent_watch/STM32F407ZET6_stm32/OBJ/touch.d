@@ -184,6 +184,9 @@
 ..\obj\touch.o: ..\LVGL\ui\ui_helpers.h
 ..\obj\touch.o: ..\LVGL\ui\ui.h
 ..\obj\touch.o: ..\LVGL\ui\ui_events.h
+..\obj\touch.o: ..\HARDWARE\RTC\RTC.h
+..\obj\touch.o: ..\HARDWARE\BLT_cmd\BLT_cmd.h
+..\obj\touch.o: ..\HARDWARE\RTC\RTC.h
 ..\obj\touch.o: ..\FreeRTOS_INCLUDE\FreeRTOS.h
 ..\obj\touch.o: ..\USER\FreeRTOSConfig.h
 ..\obj\touch.o: ..\FreeRTOS_INCLUDE\projdefs.h

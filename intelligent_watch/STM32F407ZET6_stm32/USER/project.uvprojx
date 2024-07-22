@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx,LV_LVGL_H_INCLUDE_SIMPLE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\DEVICE_LIB\inc;..\CMSIS;..\SYSTEM;..\USER;..\SYSTEM\Delay;..\SYSTEM\sys;..\LVGL;..\LVGL\src;..\LVGL\examples\porting;..\LVGL\demos\widgets;..\HARDWARE\LCD;..\HARDWARE\TIM;..\HARDWARE\uasrt;..\LVGL\ui;..\FreeRTOS_PORTABLE;..\FreeRTOS_INCLUDE</IncludePath>
+              <IncludePath>..\DEVICE_LIB\inc;..\CMSIS;..\SYSTEM;..\USER;..\SYSTEM\Delay;..\SYSTEM\sys;..\LVGL;..\LVGL\src;..\LVGL\examples\porting;..\LVGL\demos\widgets;..\HARDWARE\LCD;..\HARDWARE\TIM;..\HARDWARE\uasrt;..\LVGL\ui;..\FreeRTOS_PORTABLE;..\FreeRTOS_INCLUDE;..\HARDWARE\RTC;..\HARDWARE\BLT_cmd</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -465,6 +465,16 @@
               <FileType>1</FileType>
               <FilePath>..\DEVICE_LIB\src\stm32f4xx_spi.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\DEVICE_LIB\src\stm32f4xx_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\DEVICE_LIB\src\stm32f4xx_pwr.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -520,6 +530,16 @@
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\uasrt\uasrt.c</FilePath>
             </File>
+            <File>
+              <FileName>RTC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\RTC\RTC.c</FilePath>
+            </File>
+            <File>
+              <FileName>BLT_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\BLT_cmd\BLT_cmd.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -569,6 +589,11 @@
               <FileName>ui_Screen1.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LVGL\ui\screens\ui_Screen1.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_Screen2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\ui\screens\ui_Screen2.c</FilePath>
             </File>
           </Files>
         </Group>
