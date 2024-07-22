@@ -1,0 +1,7 @@
+用spi1
+PB3==SPI1_SCK
+PB4==SPI1_MISO
+PB5==SPI1_MOSI
+PB14==F_CS
+
+
