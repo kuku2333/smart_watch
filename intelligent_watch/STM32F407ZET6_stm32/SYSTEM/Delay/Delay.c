@@ -27,6 +27,63 @@
    * 
    ******************************************************************************
 **/
+
+#if RTOS_DELAY
+//延时微秒 	非阻塞
+void Delay_us(u32 nus)
+{
+	int  sum  = 0;             //作为计数器，对递减次数进行累加
+	int  load = SysTick->LOAD; //把Systick的重载寄存器的值备份 
+	int  told = 0;						 //用于存储读取的Systick的VAL寄存器的第1次的值
+	int  tnew = 0;             //用于存储读取的Systick的VAL寄存器的第2次的值
+
+	told = SysTick->VAL;       //读取第1次
+
+	while(1)
+	{
+		tnew = SysTick->VAL ;  //读取第2次
+		
+		if(told != tnew)
+		{
+			//此时分为2种情况：told > tnew (一轮之内)  or   told < tnew (一轮之外)
+			if(told > tnew)
+			{
+				sum += told - tnew;
+			}						
+			else
+			{
+				sum += load - tnew + told;
+			}
+			
+			told = tnew;
+			
+			//判断递减次数之和是否达到延时时间对应的计数次数
+			if(sum >= nus*168)
+			{
+				break;
+			}
+		}
+	}
+}
+
+//延时毫秒 
+void Delay_ms(uint32_t nms)
+{
+	while(nms--)
+	{
+		Delay_us(1000);
+	}
+}
+
+/*用ms延时来实现s延时*/
+void Delay_s(uint32_t ns)
+{
+	while(ns--)
+	{
+		Delay_ms(1000);
+	}
+}
+#else
 void Delay_us(uint32_t xus)
 {
 	/*每次计数周期为1us，原理查内核手册，所以循环多少次就是多少us*/ 
@@ -65,7 +122,7 @@ void Delay_ms(uint32_t xms)
 }
 
 /*用ms延时来实现s延时*/
-void Delay_s(int ns)
+void Delay_s(uint32_t ns)
 {
 	int i;
 	
@@ -74,3 +131,4 @@ void Delay_s(int ns)
 		Delay_ms(1000);
 	}
 }
+#endif

@@ -1706,39 +1706,14 @@
               <FilePath>..\LVGL\ui\components\ui_comp_hook.c</FilePath>
             </File>
             <File>
-              <FileName>ui_Screen4.c</FileName>
+              <FileName>ui_Screen1.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_Screen4.c</FilePath>
+              <FilePath>..\LVGL\ui\screens\ui_Screen1.c</FilePath>
             </File>
             <File>
-              <FileName>ui_Screen5.c</FileName>
+              <FileName>ui_Screen2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_Screen5.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_ShowTime.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_ShowTime.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_Start.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_Start.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_1670719189.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\images\ui_img_1670719189.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_img_1886717116.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\images\ui_img_1886717116.c</FilePath>
-            </File>
-            <File>
-              <FileName>ui_LockScreen.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_LockScreen.c</FilePath>
+              <FilePath>..\LVGL\ui\screens\ui_Screen2.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -15,17 +15,30 @@ extern "C" {
 #include "ui_helpers.h"
 #include "ui_events.h"
 
-// SCREEN: ui_Screen1
-void ui_Screen1_screen_init(void);
-void ui_event_Screen1(lv_event_t * e);
-extern lv_obj_t * ui_Screen1;
-void ui_event_Button1(lv_event_t * e);
-extern lv_obj_t * ui_Button1;
-// SCREEN: ui_Screen2
-void ui_Screen2_screen_init(void);
-extern lv_obj_t * ui_Screen2;
-extern lv_obj_t * ui_Arc1;
-extern lv_obj_t * ui_Label1;
+// SCREEN: ui_MainScreen
+void ui_MainScreen_screen_init(void);
+void ui_event_MainScreen(lv_event_t * e);
+extern lv_obj_t * ui_MainScreen;
+void ui_event_ButtonTime(lv_event_t * e);
+extern lv_obj_t * ui_ButtonTime;
+extern lv_obj_t * ui_LabelTime;
+void ui_event_ButtonBloodHeart(lv_event_t * e);
+extern lv_obj_t * ui_ButtonBloodHeart;
+extern lv_obj_t * ui_LabelBloodHeart;
+// SCREEN: ui_ScreenTime
+void ui_ScreenTime_screen_init(void);
+void ui_event_ScreenTime(lv_event_t * e);
+extern lv_obj_t * ui_ScreenTime;
+extern lv_obj_t * ui_ArcTimeSeconds;
+extern lv_obj_t * ui_LabelTimes;
+// SCREEN: ui_ScreenBloodHeart
+void ui_ScreenBloodHeart_screen_init(void);
+void ui_event_ScreenBloodHeart(lv_event_t * e);
+extern lv_obj_t * ui_ScreenBloodHeart;
+extern lv_obj_t * ui_LabelHeartPre;
+extern lv_obj_t * ui_LabelHeart;
+extern lv_obj_t * ui_LabelBloodPre;
+extern lv_obj_t * ui_LabelBlood;
 extern lv_obj_t * ui____initial_actions0;
 
 

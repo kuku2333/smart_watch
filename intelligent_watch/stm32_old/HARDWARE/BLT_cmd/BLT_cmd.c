@@ -88,7 +88,7 @@ void USART2_IRQHandler(void)
         /* Receive Transaction data */
 		data = USART_ReceiveData(USART2);
 		//printf("data: %c\r\n", data);
-		//USART_SendData(USART1, data);
+//		USART_SendData(USART1, data);
 		
 		// 读取接收到的字节
         //uint8_t data = USART_ReceiveData(USART2);
@@ -122,6 +122,7 @@ void process_command(uint8_t *cmd)
     if(strstr((char *)cmd, "SETTIME:") == cmd) 
 	{
 		uint8_t *pos = strstr((char *)cmd, "SETTIME:");
+		printf("into prase\r\n");
         // 解析时间并设置RTC
         //RTC_TimeTypeDef RTC_TimeStructure;
         // 假设函数parse_time成功解析时间并填充RTC_TimeStructure
@@ -151,86 +152,86 @@ bool parse_time(char *time_str, RTC_TimeTypeDef *RTC_TimeStructure)
 	return true;
 }
 
-void Send_String(char *string)
-{
-	uint8_t i = 0;
-	char temp;
-	
-	while(1)
-	{
-		temp = string[i];
-		USART_SendData(USART1, temp);
-		i++;
-		Delay_ms(10);
-		if(temp == 0x00 || temp == 0xFF)
-		{
-			break;
-		}	
-	}
-}
+//void Send_String(char *string)
+//{
+//	uint8_t i = 0;
+//	char temp;
+//	
+//	while(1)
+//	{
+//		temp = string[i];
+//		USART_SendData(USART1, temp);
+//		i++;
+//		Delay_ms(10);
+//		if(temp == 0x00 || temp == 0xFF)
+//		{
+//			break;
+//		}	
+//	}
+//}
 
-void Uasrt1_Init(void)
-{
-	USART_InitTypeDef USART_InitStructure;
-    NVIC_InitTypeDef NVIC_InitStructure;
-    GPIO_InitTypeDef GPIO_InitStructure;
-	
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-	
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource9,  GPIO_AF_USART1);
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource10, GPIO_AF_USART1);
+//void Uasrt1_Init(void)
+//{
+//	USART_InitTypeDef USART_InitStructure;
+//    NVIC_InitTypeDef NVIC_InitStructure;
+//    GPIO_InitTypeDef GPIO_InitStructure;
+//	
+//	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+//	
+//	GPIO_PinAFConfig(GPIOA, GPIO_PinSource9,  GPIO_AF_USART1);
+//	GPIO_PinAFConfig(GPIOA, GPIO_PinSource10, GPIO_AF_USART1);
 
-	/* Configure USART Tx and Rx as alternate function push-pull */
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
-	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
-	GPIO_Init(GPIOA, &GPIO_InitStructure);
-	
-	USART_InitStructure.USART_BaudRate = 9600;
-    USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-    USART_InitStructure.USART_StopBits = USART_StopBits_1;
-    USART_InitStructure.USART_Parity = USART_Parity_No;
-    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-    USART_Init(USART1, &USART_InitStructure);
+//	/* Configure USART Tx and Rx as alternate function push-pull */
+//	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+//	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+//	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+//	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+//	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
+//	GPIO_Init(GPIOA, &GPIO_InitStructure);
+//	
+//	USART_InitStructure.USART_BaudRate = 9600;
+//    USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+//    USART_InitStructure.USART_StopBits = USART_StopBits_1;
+//    USART_InitStructure.USART_Parity = USART_Parity_No;
+//    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+//    USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+//    USART_Init(USART1, &USART_InitStructure);
 
-	/* Enable the USARTx Interrupt */
-    NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-    NVIC_Init(&NVIC_InitStructure);
-    
-	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
-	
-    /* Enable USART */
-    USART_Cmd(USART1, ENABLE);
-}
+//	/* Enable the USARTx Interrupt */
+//    NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+//    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+//    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+//    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+//    NVIC_Init(&NVIC_InitStructure);
+//    
+//	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+//	
+//    /* Enable USART */
+//    USART_Cmd(USART1, ENABLE);
+//}
 
-void USART1_IRQHandler(void)
-{
-	uint8_t d=0;
-	
-	//检测是否接收到数据
-	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
-	{
-		d=USART_ReceiveData(USART1);
-		
-		
-		g_usart1_rx_buf[g_usart1_rx_cnt++]=d;
-	
-		if(g_usart1_rx_cnt >= sizeof g_usart1_rx_buf)
-		{
-			g_usart1_rx_end=1;
-		}			
-	
-		//清空标志位，可以响应新的中断请求
-		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
-	}
-}
+//void USART1_IRQHandler(void)
+//{
+//	uint8_t d=0;
+//	
+//	//检测是否接收到数据
+//	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+//	{
+//		d=USART_ReceiveData(USART1);
+//		
+//		
+//		g_usart1_rx_buf[g_usart1_rx_cnt++]=d;
+//	
+//		if(g_usart1_rx_cnt >= sizeof g_usart1_rx_buf)
+//		{
+//			g_usart1_rx_end=1;
+//		}			
+//	
+//		//清空标志位，可以响应新的中断请求
+//		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+//	}
+//}
 
 void usart1_send_bytes(uint8_t *buf,uint32_t len)
 {
@@ -248,14 +249,14 @@ void usart1_send_bytes(uint8_t *buf,uint32_t len)
 	}
 }
 
-struct __FILE { int handle; /* Add whatever you need here */ };
-FILE __stdout;
-FILE __stdin;
+//struct __FILE { int handle; /* Add whatever you need here */ };
+//FILE __stdout;
+//FILE __stdin;
 
-int fputc(int ch, FILE *f)
-{
-	USART_SendData(USART2, ch);	
-	while( USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET );
-		
-	return ch;
-}
+//int fputc(int ch, FILE *f)
+//{
+//	USART_SendData(USART2, ch);	
+//	while( USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET );
+//		
+//	return ch;
+//}

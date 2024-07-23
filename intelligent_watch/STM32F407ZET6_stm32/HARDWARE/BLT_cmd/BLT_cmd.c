@@ -233,21 +233,21 @@ bool parse_time(char *time_str, RTC_TimeTypeDef *RTC_TimeStructure)
 //	}
 //}
 
-void usart1_send_bytes(uint8_t *buf,uint32_t len)
-{
-	uint8_t *p = buf;
-	
-	while(len--)
-	{
-		USART_SendData(USART1,*p);
-		
-		p++;
-		
-		//等待数据发送成功
-		while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==RESET);
-		USART_ClearFlag(USART1,USART_FLAG_TXE);
-	}
-}
+//void usart1_send_bytes(uint8_t *buf,uint32_t len)
+//{
+//	uint8_t *p = buf;
+//	
+//	while(len--)
+//	{
+//		USART_SendData(USART1,*p);
+//		
+//		p++;
+//		
+//		//等待数据发送成功
+//		while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==RESET);
+//		USART_ClearFlag(USART1,USART_FLAG_TXE);
+//	}
+//}
 
 //struct __FILE { int handle; /* Add whatever you need here */ };
 //FILE __stdout;

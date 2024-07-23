@@ -1,7 +1,11 @@
 ..\obj\main.o: main.c
+..\obj\main.o: includes.h
+..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\main.o: ..\SYSTEM\stm32f4xx.h
 ..\obj\main.o: ..\CMSIS\core_cm4.h
-..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\main.o: ..\CMSIS\core_cmInstr.h
 ..\obj\main.o: ..\CMSIS\core_cmFunc.h
 ..\obj\main.o: ..\CMSIS\core_cm4_simd.h
@@ -34,10 +38,6 @@
 ..\obj\main.o: ..\DEVICE_LIB\inc\stm32f4xx_dac.h
 ..\obj\main.o: ..\DEVICE_LIB\inc\stm32f4xx_dcmi.h
 ..\obj\main.o: ..\DEVICE_LIB\inc\stm32f4xx_fsmc.h
-..\obj\main.o: includes.h
-..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\main.o: stm32f4xx_it.h
 ..\obj\main.o: ..\SYSTEM\sys\sys.h
 ..\obj\main.o: ..\SYSTEM\Delay\Delay.h

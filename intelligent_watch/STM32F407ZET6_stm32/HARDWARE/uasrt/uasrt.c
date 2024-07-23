@@ -80,7 +80,8 @@ void USART1_IRQHandler(void)
 	if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
 	{
 		d=USART_ReceiveData(USART1);
-		USART_SendData(USART1, d);
+//		printf("usart1 get\r\n");
+//		USART_SendData(USART2, d);
 		
 //		g_usart1_rx_buf[g_usart1_rx_cnt++]=d;
 //	

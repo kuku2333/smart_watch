@@ -17,11 +17,11 @@
 #include "lv_port_disp.h"
 #include "lv_port_indev.h"
 #include "lv_demo_widgets.h"
-//#include "ui.h"
-//#include "ui_helpers.h"
+#include "ui.h"
+#include "ui_helpers.h"
 //#include "ui_events.h"
-//#include "RTC.h"
-//#include "BLT_cmd.h"
+#include "RTC.h"
+#include "BLT_cmd.h"
 
 extern GPIO_InitTypeDef  	GPIO_InitStructure;
 extern NVIC_InitTypeDef 	NVIC_InitStructure;		

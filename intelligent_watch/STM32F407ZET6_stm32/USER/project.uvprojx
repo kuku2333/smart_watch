@@ -565,6 +565,11 @@
               <FileType>5</FileType>
               <FilePath>.\stm32f4xx_it.h</FilePath>
             </File>
+            <File>
+              <FileName>FreeRTOSConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\FreeRTOSConfig.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -586,14 +591,19 @@
               <FilePath>..\LVGL\ui\components\ui_comp_hook.c</FilePath>
             </File>
             <File>
-              <FileName>ui_Screen1.c</FileName>
+              <FileName>ui_MainScreen.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_Screen1.c</FilePath>
+              <FilePath>..\LVGL\ui\screens\ui_MainScreen.c</FilePath>
             </File>
             <File>
-              <FileName>ui_Screen2.c</FileName>
+              <FileName>ui_ScreenBloodHeart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\LVGL\ui\screens\ui_Screen2.c</FilePath>
+              <FilePath>..\LVGL\ui\screens\ui_ScreenBloodHeart.c</FilePath>
+            </File>
+            <File>
+              <FileName>ui_ScreenTime.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LVGL\ui\screens\ui_ScreenTime.c</FilePath>
             </File>
           </Files>
         </Group>
